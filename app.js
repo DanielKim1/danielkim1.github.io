@@ -23,10 +23,8 @@ const hopes = shuffle([
   "to run a 10K"
 ]);
 const fears = shuffle([
-  'that "anyone can create art" is feel-good bullshit, and that I lack artistic talent',
-  "of being fired",
-  "of bothering my friends",
-  "of developing chronic pain",
+  'that "anyone can create art" is a lie, and that I lack potential',
+  "that I'm bothering people by reaching out to them",
   "of people on the internet",
   "that I only have friends because they feel bad for me",
   "that my social anxiety makes me come across as rude"
