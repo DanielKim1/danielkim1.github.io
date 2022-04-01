@@ -11,6 +11,7 @@
       max-width: 37em;
       padding: 4em 1em;
     }
+    a,
     button {
       background-color: transparent;
       border: none;
@@ -21,13 +22,32 @@
       font-size: medium;
       padding: 0;
     }
+    img {
+      margin: 2em 0;
+      width: 100%;
+      filter: drop-shadow(0 0 1em #333);
+    }
+    .hidden {
+      visibility: hidden;
+    }
+    .flat {
+      height: 0;
+      margin: 0;
+    }
   </style>
 
+  <h1 class="hidden flat">Homepage</h1>
+  <h2 class="hidden flat">Email</h2>
   <p>Hi, I'm Danny.</p>
-  <p>You can get in touch with me at</p>
-  <button id="email">ZGFuaWVsa2ltMUBwcm90b25tYWlsLmNvbQ==</button>
+  <p>
+    You can get in touch with me at
+    <button aria-hidden="true" id="email">
+      ZGFuaWVsa2ltMUBwcm90b25tYWlsLmNvbQ==</button
+    >.
+    <span class="hidden">Daniel Kim one at proton mail dot-com</span>
+  </p>
 
-  <noscript>
+  <noscript aria-hidden="true">
     <p>
       Sorry, the button above will not work without JavaScript. You can get my
       email by running
@@ -36,12 +56,26 @@
     </p>
   </noscript>
 
+  <section>
+    <h2>Portfolio</h2>
+    <a href="https://www.washingtonpost.com">The Washington Post</a
+    ><img src="www.washingtonpost.com_.png" />
+    <a href="https://www.bostonglobe.com">The Boston Globe</a
+    ><img src="www.bostonglobe.com_.png" />
+    <a href="https://www.leparisien.fr">Le Parisien</a
+    ><img src="www.leparisien.fr_.png" /> <a href="https://www.rtl.de">RTL.de</a
+    ><img src="www.rtl.de_.png" />
+    <a href="https://mapandscorecard.freefrom.org">FreeFrom Map and Scorecard</a
+    ><img src="mapandscorecard.freefrom.org_.png" />
+    <a href="https://compass.freefrom.org">FreeFrom Compass</a
+    ><img src="compass.freefrom.org_.png" />
+  </section>
+
   <script>
     const emailElement = document.getElementById("email");
 
     function decodeEmail() {
-      const a = emailElement.innerText;
-      emailElement.outerHTML = atob(a);
+      emailElement.outerHTML = atob(emailElement.innerText);
     }
 
     window.onload = function () {
